@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 project(ffplay_clion)
 
-set(CMAKE_CXX_STANDARD 14)
+#set(CMAKE_CXX_STANDARD 14)
 
 ## 添加头文件
 include_directories(/usr/local/include)
