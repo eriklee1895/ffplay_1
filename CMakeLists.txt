@@ -20,10 +20,7 @@ pkg_check_modules(LIBAV REQUIRED IMPORTED_TARGET
         libswscale
         libavutil
         )
+link_libraries(PkgConfig::LIBAV)
 
 # 执行编译命令
 add_executable(${PROJECT_NAME} ffplay.c fftools/cmdutils.c fftools/opt_common.c)
-
-target_link_libraries(${PROJECT_NAME}
-        PkgConfig::LIBAV
-        )
