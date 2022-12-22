@@ -23,4 +23,5 @@ pkg_check_modules(LIBAV REQUIRED IMPORTED_TARGET
 link_libraries(PkgConfig::LIBAV)
 
 # 执行编译命令
-add_executable(${PROJECT_NAME} ffplay.c fftools/cmdutils.c fftools/opt_common.c)
+add_executable(${PROJECT_NAME} ffplay.c fftools/cmdutils.c fftools/opt_common.c
+        frame_queue.c)
