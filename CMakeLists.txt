@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 project(ffplay_clion)
 
-#set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 14)
 
 ## 添加头文件
 include_directories(/usr/local/include)
@@ -22,7 +22,7 @@ pkg_check_modules(LIBAV REQUIRED IMPORTED_TARGET
         )
 
 # 执行编译命令
-add_executable(${PROJECT_NAME} ffplay.c cmdutils.c opt_common.c)
+add_executable(${PROJECT_NAME} ffplay.c fftools/cmdutils.c fftools/opt_common.c)
 
 target_link_libraries(${PROJECT_NAME}
         PkgConfig::LIBAV

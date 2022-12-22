@@ -24,7 +24,6 @@
  */
 
 #include "config.h"
-#include "config_components.h"
 #include <inttypes.h>
 #include <math.h>
 #include <limits.h>
@@ -33,13 +32,10 @@
 
 #include "libavutil/avstring.h"
 #include "libavutil/channel_layout.h"
-#include "libavutil/eval.h"
 #include "libavutil/mathematics.h"
 #include "libavutil/pixdesc.h"
-#include "libavutil/imgutils.h"
 #include "libavutil/dict.h"
 #include "libavutil/fifo.h"
-#include "libavutil/parseutils.h"
 #include "libavutil/samplefmt.h"
 #include "libavutil/time.h"
 #include "libavutil/bprint.h"
@@ -59,8 +55,8 @@
 #include <SDL.h>
 #include <SDL_thread.h>
 
-#include "cmdutils.h"
-#include "opt_common.h"
+#include "fftools/cmdutils.h"
+#include "fftools/opt_common.h"
 
 const char program_name[] = "ffplay";
 const int program_birth_year = 2003;
